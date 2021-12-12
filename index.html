@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="profile__card">
+      <div class="profile__info__card">
+        <div class="card__img">
+          <img src="images/image-jeremy.png" alt="profile picture">
+        </div>
+        <div class="card__name">
+          <span class="small__text">Report for</span>
+          <h1 class="profile__title">Jeremy Robson</h1>
+        </div>
+      </div>
+      <div class="selector">
+        <ul id="timeframes" class="timeframes medium__text selector__text">
+          <li id="daily">Daily</li>
+          <li id="weekly">Weekly</li>
+          <li id="monthly">Monthly</li>
+        </ul>
+      </div>
+    </div>
+    <div class="work">
+      <img class="icon__state" src="images/icon-work.svg" alt="work icon">
+      <div class="work__value common__grid">
+        <div class="value__head">
+        <span class="value__head__subtitle medium__text">
+          Work
+        </span>
+        <a class="value__head__bt"><img src="images/icon-ellipsis.svg" alt="menu icon"></a>
+        </div>
+        <div class="value__shown">
+          <span id="value__shown__current0" class="large__text">00hrs</span>
+          <p id="value__shown__previous0" class="small__text">Last Week - 00hrs</p>
+        </div>
+      </div>
+    </div>
+    <div class="play">
+      <img class="icon__state" src="images/icon-play.svg" alt="play icon">
+      <div class="play__value common__grid">
+        <div class="value__head">
+        <span class="value__head__subtitle medium__text">
+          Play
+        </span>
+        <a class="value__head__bt"><img src="images/icon-ellipsis.svg" alt="menu icon"></a>
+        </div>
+        <div class="value__shown">
+          <span id="value__shown__current1"class="large__text">00hrs</span>
+          <p id="value__shown__previous1" class="small__text">Last Week - 00hrs</p>
+        </div>
+      </div>
+    </div>
+    <div class="study">
+      <img class="icon__state" src="images/icon-study.svg" alt="study icon">
+      <div class="study__value common__grid">
+        <div class="value__head">
+        <span class="value__head__subtitle medium__text">
+          Study
+        </span>
+        <a class="value__head__bt"><img src="images/icon-ellipsis.svg" alt="menu icon"></a>
+        </div>
+        <div class="value__shown">
+          <span id="value__shown__current2"class="large__text">00hrs</span>
+          <p id="value__shown__previous2" class="small__text">Last Week - 00hrs</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="exercise">
+      <img class="icon__state" src="images/icon-exercise.svg" alt="exercise icon">
+      <div class="exercise__value common__grid">
+        <div class="value__head">
+        <span class="value__head__subtitle medium__text">
+          Exercise
+        </span>
+        <a class="value__head__bt"><img src="images/icon-ellipsis.svg" alt="menu icon"></a>
+        </div>
+        <div class="value__shown">
+          <span id="value__shown__current3"class="large__text">00hrs</span>
+          <p id="value__shown__previous3"class="small__text">Last Week - 00hrs</p>
+        </div>
+      </div>
+    </div>
+    <div class="social">
+      <img class="icon__state" src="images/icon-social.svg" alt="social icon">
+      <div class="social__value common__grid">
+        <div class="value__head">
+        <span class="value__head__subtitle medium__text">
+          Social
+        </span>
+        <a class="value__head__bt"><img src="images/icon-ellipsis.svg" alt="menu icon"></a>
+        </div>
+        <div class="value__shown">
+          <span id="value__shown__current4" class="large__text">00hrs</span>
+          <p id="value__shown__previous4" class="small__text">Last Week - 00hrs</p>
+        </div>
+      </div>
+    </div>
+    <div class="selfcare">
+      <img class="icon__state" src="images/icon-self-care.svg" alt="selfcare icon">
+      <div class="selfcare__value common__grid">
+        <div class="value__head">
+        <span class="value__head__subtitle medium__text">
+          Self Care
+        </span>
+        <a class="value__head__bt"><img src="images/icon-ellipsis.svg" alt="menu icon"></a>
+        </div>
+        <div class="value__shown">
+          <span id="value__shown__current5" class="large__text">00hrs</span>
+          <p id="value__shown__previous5" class="small__text">Last Week - 00hrs</p>
+        </div>
+      </div>
+    </div>
+  </main> 
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/DEUOLEIDELB">DEUOLEIDELB</a>.
+  </footer>
+  <script src="main.js"></script>
+  <script type="text/javascript" src="data.json"></script>
+</body>
+</html>

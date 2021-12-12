@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/* 
+Hi,
+
+Some elements to be specified ::before
+
+I use [Firefox] to preview my progress. Coding on [VsCode]
+
+Trying my best to give clear variables for an easiest reading experience. 
+(not that goot sometimes)
+
+First time using JSON file on a project
+
+*/
+/* = Init = */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    height: 100%;
+    background-color: hsl(226, 43%, 10%);
+}
+
+body {
+    min-height: 100vh;
+    width: 900px;
+    margin: 0 auto;
+    color: #FFF;
+    font-family: 'Rubik', sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* = Text Style =*/
+.small__text {
+    font-size: .75rem;
+    color: hsl(236, 100%, 87%);
+}
+.medium__text {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.large__text {
+    font-size: 2.25rem;
+    font-weight: 300;
+}
+
+.profile__title {
+    font-weight: 300;
+}
+
+.selector__text {
+    font-weight: 300;
+    color: hsl(236, 100%, 87%);
+}
+/* = Positioning Grid ELement = */
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(2, 200px);
+    grid-gap: 25px;
+}
+
+.profile__card {
+    grid-column: 1 / 1;
+    grid-row: 1 / span 2;
+    position: relative;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+}
+/* = Profile Card = */
+.profile__info__card {
+    background-color: hsl(246, 80%, 60%);
+    height: 275px;
+    border-radius: 15px;
+    padding: 25px;
+}
+.card__img {
+    margin-bottom: 25px;
+}
+.card__img > img {
+    height: 4.5rem;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+}
+/* = Timeframes Selection = */
+.selector {
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+}
+
+.timeframes > li{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+/* = Hard set hovering because javascript code use id not class = */
+#daily:hover, #weekly:hover, #monthly:hover {
+    transition: 0.2s ease-in;
+    color: #FFF!important;
+}
+
+/* = Activities = */
+
+.work, .play, .study, .exercise, .social, .selfcare {
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon__state {
+    width: 60px;
+    position: absolute;
+    right: 15px;
+    top: -5px;
+}
+
+.work {
+    background-color: hsl(15, 100%, 70%);
+}
+
+.play {
+    background-color:hsl(195, 74%, 62%);
+}
+
+.study {
+    background-color: hsl(348, 100%, 68%);
+}
+
+.exercise {
+    background-color: hsl(145, 58%, 55%);
+}
+
+.social {
+    background-color: hsl(264, 64%, 52%);
+}
+
+.selfcare {
+    background-color: hsl(43, 84%, 65%);
+}
+
+.common__grid {
+    border-radius: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 166px;
+    background-color:hsl(235, 46%, 20%);
+    padding: 25px;
+}
+
+.common__grid:hover {
+    transition: 0.2s ease-in;
+    background-color: hsl(235, 46%, 28%);
+}
+/* = Activities name and menu button = */
+.value__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.value__head__bt > img {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 15px;
+}
+/* = Tried multiple attempt 😅 = */
+.value__head__bt > img:hover {
+    transition: 1s ease-in;
+    filter: invert(0%) sepia(0%) saturate(2000%) hue-rotate(0deg) brightness(2000%) contrast(100%);
+}
+
+/* = Activities value = */
+.value__shown__previous {
+    margin-top: 10px
+}
+
+/* = Responsive medium screen (under 900px) = */
+
+@media screen and (max-width: 900px) {
+    /* = Removing size of bigger screen = */
+    body {
+        width: 100%;
+        overflow: visible;
+    }
+    /* = Setting Grid for screen between 900px to 460px = */
+    main {
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(4, 200px);
+    }
+}
+
+
+/* = Responsive small screen (under 460px) = */
+
+@media screen and (max-width: 460px) {
+/* =  = */
+    /* = Text Style =*/
+    .small__text {
+        font-size: .85rem;
+        color: hsl(236, 100%, 87%);
+    }
+    .medium__text {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .large__text {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    .profile__title {
+        font-size: 1.5rem;
+    }
+    .selector__text {
+        font-weight: 300;
+        color: hsl(236, 100%, 87%);
+    }
+    /* = Setting the size of the Grid to be responsive to smaller screen = */
+    main {
+        width: 100%;
+        padding: 50px 30px;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(7, 175px);
+    }
+    /* = Profile is set to only use 1 cell of the Grid = */
+    .profile__card {
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+    }
+
+    /* = Getting Picture and Text inline = */
+    .profile__info__card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 125px;
+    }
+    .card__img {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+    .card__img > img {
+        height: 4rem;
+        border: 2px solid #FFF;
+        border-radius: 50%;
+    }
+
+    /* = Getting Selector inline with flex = */
+    .selector {
+        height: 50px;
+        padding: 0;
+    }
+
+    .timeframes {
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 10px;
+        height: 100%;
+    }
+
+    .timeframes > li {
+        display: inline-block;
+    }
+
+    /* = Adjusting Card = */
+    .common__grid {
+        height: 135px;
+    }
+    .value__head {
+        margin-bottom: 15px;
+    }
+    .value__shown {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
