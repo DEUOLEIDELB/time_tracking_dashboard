@@ -174,6 +174,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position:relative;
     margin-bottom: 25px;
 }
 
@@ -183,6 +184,31 @@ main {
     cursor: pointer;
     width: 15px;
 }
+
+/* = DropDown Menu = */
+.dropDown__container {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    z-index: 10;
+    height: 110px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(235, 36%, 26%);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #1b1919;
+    color: hsl(236, 100%, 87%);
+}
+.dropDown__container > ul > li:not(:last-child) {
+    margin-bottom: 7.5px;
+}
+#dropDownMenu > li:hover {
+    cursor: pointer;
+    color: #FFF!important;
+}
+
 /* = Tried multiple attempt 😅 = */
 .value__head__bt > img:hover {
     transition: 1s ease-in;
@@ -294,5 +320,10 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .dropDown__container {
+        top: 0;
+        height: 100px;
     }
 }
